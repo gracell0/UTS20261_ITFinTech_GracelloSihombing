@@ -1,3 +1,4 @@
+export const BRAND = "Kedai Gracello";
 export const TAX_RATE = 0.11;
 export const SHIPPING_FEE = 10000;
 

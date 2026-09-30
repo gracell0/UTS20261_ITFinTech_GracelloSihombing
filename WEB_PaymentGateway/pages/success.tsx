@@ -21,26 +21,26 @@ export default function Success() {
   const paid = order?.status === "PAID";
 
   return (
-    <div className="mx-auto min-h-screen max-w-md bg-gray-50 px-6 pt-20 text-center shadow-xl">
-      <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-gray-100">
+    <div className="mx-auto min-h-screen max-w-md bg-stone-50 px-6 pt-20 text-center shadow-2xl">
+      <div className="rounded-[2rem] bg-white p-8 shadow-lg ring-1 ring-stone-100">
         {paid ? (
-          <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-green-100 text-4xl text-green-600">✓</div>
+          <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-green-100 text-5xl text-green-600">✓</div>
         ) : (
-          <div className="mx-auto h-20 w-20 animate-spin rounded-full border-4 border-indigo-100 border-t-indigo-600" />
+          <div className="mx-auto h-24 w-24 animate-spin rounded-full border-4 border-orange-100 border-t-orange-500" />
         )}
-        <h1 className="mt-6 text-2xl font-bold text-gray-900">
+        <h1 className="mt-6 text-2xl font-bold text-stone-900">
           {paid ? "Pembayaran LUNAS" : "Menunggu konfirmasi pembayaran..."}
         </h1>
-        {order && <p className="mt-3 text-lg font-semibold text-indigo-600">{rp(order.total)}</p>}
+        {order && <p className="mt-3 text-xl font-bold text-orange-600">{rp(order.total)}</p>}
         <span
-          className={`mt-2 inline-block rounded-full px-3 py-1 text-xs font-medium ${
+          className={`mt-3 inline-block rounded-full px-4 py-1 text-xs font-semibold ${
             paid ? "bg-green-100 text-green-700" : "bg-amber-100 text-amber-700"
           }`}
         >
           Status: {order?.status ?? "..."}
         </span>
         <div className="mt-8">
-          <Link href="/" className="inline-block rounded-xl bg-indigo-600 px-6 py-2.5 font-medium text-white hover:bg-indigo-700">
+          <Link href="/" className="inline-block rounded-full bg-orange-500 px-7 py-3 font-medium text-white shadow-md shadow-orange-200 hover:bg-orange-600">
             Kembali belanja
           </Link>
         </div>
